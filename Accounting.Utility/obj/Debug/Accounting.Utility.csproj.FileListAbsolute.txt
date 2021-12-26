@@ -1,0 +1,11 @@
+C:\Users\Milad\Desktop\Accounting\Accounting\Accounting.Utility\bin\Debug\Accounting.Utility.dll
+C:\Users\Milad\Desktop\Accounting\Accounting\Accounting.Utility\bin\Debug\Accounting.Utility.pdb
+C:\Users\Milad\Desktop\Accounting\Accounting\Accounting.Utility\obj\Debug\Accounting.Utility.dll
+C:\Users\Milad\Desktop\Accounting\Accounting\Accounting.Utility\obj\Debug\Accounting.Utility.pdb
+C:\Users\Milad\Desktop\Accounting\Accounting\Accounting.Utility\obj\Debug\Accounting.Utility.csprojResolveAssemblyReference.cache
+D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.Utility\bin\Debug\Accounting.Utility.dll
+D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.Utility\bin\Debug\Accounting.Utility.pdb
+D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.Utility\obj\Debug\Accounting.Utility.csprojAssemblyReference.cache
+D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.Utility\obj\Debug\Accounting.Utility.csproj.CoreCompileInputs.cache
+D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.Utility\obj\Debug\Accounting.Utility.dll
+D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.Utility\obj\Debug\Accounting.Utility.pdb

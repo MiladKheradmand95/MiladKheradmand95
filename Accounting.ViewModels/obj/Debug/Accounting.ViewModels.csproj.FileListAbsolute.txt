@@ -1,0 +1,11 @@
+C:\Users\Milad\Desktop\Accounting\Accounting\Accounting.ViewModels\bin\Debug\Accounting.ViewModels.dll
+C:\Users\Milad\Desktop\Accounting\Accounting\Accounting.ViewModels\bin\Debug\Accounting.ViewModels.pdb
+C:\Users\Milad\Desktop\Accounting\Accounting\Accounting.ViewModels\obj\Debug\Accounting.ViewModels.dll
+C:\Users\Milad\Desktop\Accounting\Accounting\Accounting.ViewModels\obj\Debug\Accounting.ViewModels.pdb
+C:\Users\Milad\Desktop\Accounting\Accounting\Accounting.ViewModels\obj\Debug\Accounting.ViewModels.csprojResolveAssemblyReference.cache
+D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.ViewModels\bin\Debug\Accounting.ViewModels.dll
+D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.ViewModels\bin\Debug\Accounting.ViewModels.pdb
+D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.ViewModels\obj\Debug\Accounting.ViewModels.csprojAssemblyReference.cache
+D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.ViewModels\obj\Debug\Accounting.ViewModels.csproj.CoreCompileInputs.cache
+D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.ViewModels\obj\Debug\Accounting.ViewModels.dll
+D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.ViewModels\obj\Debug\Accounting.ViewModels.pdb
