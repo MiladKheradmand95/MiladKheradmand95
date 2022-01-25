@@ -37,7 +37,7 @@ namespace Accounting.App.Customer
                 if (Id != 0)
                 {
                     var accound = db.AccountingRepository.GetById(Id);
-                    txtAmount.Value = accound.Amuont;
+                    txtAmount.Text = accound.Amuont.ToString();
                     txtDescription.Text = accound.Description;
                     txtName.Text = db.CustomerRepositories.GetFullNameById(accound.CostumerID);
                     if (accound.TypeID == 1)
@@ -81,11 +81,12 @@ namespace Accounting.App.Customer
                 {
 
                     DataLayer.Accounting account = new DataLayer.Accounting();
+                    account.Status = false;
                     DateTime? startDate;
                     if (txtDate.Text == "    /  /")
                     {
                         account.CostumerID = int.Parse(dgCustomer.CurrentRow.Cells[0].Value.ToString());
-                        account.Amuont = int.Parse(txtAmount.Value.ToString());
+                        account.Amuont =Convert.ToDecimal(txtAmount.Text.Replace(",", ""));
                         account.TypeID = (rdRecive.Checked) ? 1 : 2;
                         account.Datetitle = DateTime.Now;
                         account.Description = txtDescription.Text;
@@ -95,7 +96,7 @@ namespace Accounting.App.Customer
                         startDate = Convert.ToDateTime(txtDate.Text);
                         startDate = DateConverter.ToMiladi(startDate.Value);
                         account.CostumerID = int.Parse(dgCustomer.CurrentRow.Cells[0].Value.ToString());
-                        account.Amuont = int.Parse(txtAmount.Value.ToString());
+                        account.Amuont = Convert.ToDecimal(txtAmount.Text.Replace(",", ""));
                         account.TypeID = (rdRecive.Checked) ? 1 : 2;
                         account.Datetitle = startDate;
                         account.Description = txtDescription.Text;
@@ -129,27 +130,37 @@ namespace Accounting.App.Customer
 
         private void Txttest_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if ((Convert.ToInt16(e.KeyChar) >= 48 && Convert.ToInt16(e.KeyChar) <= 57) || Convert.ToInt16(e.KeyChar) == 8)
+            {
 
+            }
+            else
+            {
+                e.KeyChar = Convert.ToChar(Keys.None);
+            }
             if (e.KeyChar == '\b')
             {
                 //e.Handled = true;
                 return;
             }
+        }
 
-            if (txttest.Text.Length >= 3)
+        private void TxtAmount_TextChanged(object sender, EventArgs e)
+        {
+            string text = txtAmount.Text.Replace(",", "");
+            if (text.Length > 3)
             {
-                string text = txttest.Text.Replace("/", "");
+
                 int count = text.Length / 3;
-                int index = 0;
-                for (int i = 0; i < count; i++)
+                int index = text.Length;
+                for (int i = text.Length;i> 3; i=i-3)
                 {
-                    index += 3;
-                    text = text.Insert(index, "/");
-                    index++;
+                        index = index - 3;
+                        text = text.Insert(index, ",");
                 }
-                txttest.Text = text;
-                txttest.SelectionStart = txttest.Text.Length;
-                txttest.SelectionLength = 0;
+                txtAmount.Text = text;
+                txtAmount.SelectionStart = txtAmount.Text.Length;
+                txtAmount.SelectionLength = 0;
             }
         }
     }

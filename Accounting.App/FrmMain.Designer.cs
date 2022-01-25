@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnCustomer = new System.Windows.Forms.ToolStripButton();
             this.BtnNewAccounting = new System.Windows.Forms.ToolStripButton();
@@ -42,18 +43,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnLogin = new System.Windows.Forms.ToolStripMenuItem();
             this.تنظیماتورودیToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.lblPay = new DevComponents.DotNetBar.LabelX();
-            this.lblRecive = new DevComponents.DotNetBar.LabelX();
-            this.lblMandeh = new DevComponents.DotNetBar.LabelX();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -180,108 +173,18 @@
             this.تنظیماتورودیToolStripMenuItem.Text = "تنظیمات ورودی";
             this.تنظیماتورودیToolStripMenuItem.Click += new System.EventHandler(this.تنظیماتورودیToolStripMenuItem_Click);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.lblMandeh);
-            this.groupBox1.Controls.Add(this.labelX3);
-            this.groupBox1.Controls.Add(this.lblRecive);
-            this.groupBox1.Controls.Add(this.labelX2);
-            this.groupBox1.Controls.Add(this.lblPay);
-            this.groupBox1.Controls.Add(this.labelX1);
-            this.groupBox1.Location = new System.Drawing.Point(317, 89);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(239, 124);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "موجودی";
-            // 
-            // labelX3
-            // 
-            // 
-            // 
-            // 
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Location = new System.Drawing.Point(139, 79);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(94, 23);
-            this.labelX3.TabIndex = 0;
-            this.labelX3.Text = "موجودی فعلی:";
-            // 
-            // labelX2
-            // 
-            // 
-            // 
-            // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(139, 50);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(94, 23);
-            this.labelX2.TabIndex = 0;
-            this.labelX2.Text = "جمع دریافتی ها :";
-            // 
-            // labelX1
-            // 
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(139, 21);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(94, 23);
-            this.labelX1.TabIndex = 0;
-            this.labelX1.Text = "جمع پرداختی ها:";
-            // 
-            // lblPay
-            // 
-            // 
-            // 
-            // 
-            this.lblPay.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblPay.Location = new System.Drawing.Point(6, 21);
-            this.lblPay.Name = "lblPay";
-            this.lblPay.Size = new System.Drawing.Size(127, 23);
-            this.lblPay.TabIndex = 0;
-            this.lblPay.Text = "0";
-            this.lblPay.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // lblRecive
-            // 
-            // 
-            // 
-            // 
-            this.lblRecive.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblRecive.Location = new System.Drawing.Point(6, 50);
-            this.lblRecive.Name = "lblRecive";
-            this.lblRecive.Size = new System.Drawing.Size(127, 23);
-            this.lblRecive.TabIndex = 0;
-            this.lblRecive.Text = "0";
-            this.lblRecive.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // lblMandeh
-            // 
-            // 
-            // 
-            // 
-            this.lblMandeh.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblMandeh.Location = new System.Drawing.Point(6, 79);
-            this.lblMandeh.Name = "lblMandeh";
-            this.lblMandeh.Size = new System.Drawing.Size(127, 23);
-            this.lblMandeh.TabIndex = 0;
-            this.lblMandeh.Text = "0";
-            this.lblMandeh.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(568, 330);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -296,7 +199,6 @@
             this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,12 +219,5 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem btnLogin;
         private System.Windows.Forms.ToolStripMenuItem تنظیماتورودیToolStripMenuItem;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private DevComponents.DotNetBar.LabelX labelX3;
-        private DevComponents.DotNetBar.LabelX labelX2;
-        private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.LabelX lblMandeh;
-        private DevComponents.DotNetBar.LabelX lblRecive;
-        private DevComponents.DotNetBar.LabelX lblPay;
     }
 }

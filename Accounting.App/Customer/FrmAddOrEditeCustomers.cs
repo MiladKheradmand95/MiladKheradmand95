@@ -37,46 +37,79 @@ namespace Accounting.App.Customer
 
             if (BaseValidator.IsFormValid(this.components))
             {
-                string imageName = Guid.NewGuid() + Path.GetExtension(PicCustomer.ImageLocation);
-                string path = Application.StartupPath + "/Images/";
-                if (!Directory.Exists(path))
+                string res = PicCustomer.ImageLocation;
+                if (res != null)
                 {
-                    Directory.CreateDirectory(path);
-                }
-                PicCustomer.Image.Save(path + imageName);
-                Customers customer = new Customers()
-                {
-                    FullName = TxtName.Text,
-                    Mobile = TxtMobile.Text,
-                    Address = TxtAddres.Text,
-                    Email = TxtEmail.Text,
-                    CustomerImage = imageName
-                };
-                using (UnitOfWork db=new UnitOfWork())
-                {
-                    if (CustomerId == 0)
+                    string imageName = Guid.NewGuid() + Path.GetExtension(res);
+                    string path = Application.StartupPath + "/Images/";
+                    if (!Directory.Exists(path))
                     {
-                        db.CustomerRepositories.InsertCustomer(customer);
+                        Directory.CreateDirectory(path);
                     }
-                    else
+                    PicCustomer.Image.Save(path + imageName);
+                    Customers customer = new Customers()
                     {
-                        customer.CustomerID = CustomerId;
-                        db.CustomerRepositories.UpdateCustomer(customer);
+                        FullName = TxtName.Text,
+                        Mobile = TxtMobile.Text,
+                        Address = TxtAddres.Text,
+                        Email = TxtEmail.Text,
+                        CustomerImage = imageName
+
+                    };
+                    using (UnitOfWork db = new UnitOfWork())
+                    {
+                        if (CustomerId == 0)
+                        {
+                            db.CustomerRepositories.InsertCustomer(customer);
+                        }
+                        else
+                        {
+                            customer.CustomerID = CustomerId;
+                            db.CustomerRepositories.UpdateCustomer(customer);
+                        }
+                        db.Save();
                     }
-                    db.Save();
                 }
-                
+                else
+                {
+                    Customers customer = new Customers()
+                    {
+                        FullName = TxtName.Text,
+                        Mobile = TxtMobile.Text,
+                        Address = TxtAddres.Text,
+                        Email = TxtEmail.Text,
+                        CustomerImage = "no-profile-image.png"
+
+                    };
+                    using (UnitOfWork db = new UnitOfWork())
+                    {
+                        if (CustomerId == 0)
+                        {
+                            db.CustomerRepositories.InsertCustomer(customer);
+                        }
+                        else
+                        {
+                            customer.CustomerID = CustomerId;
+                            db.CustomerRepositories.UpdateCustomer(customer);
+                        }
+                        db.Save();
+                    }
+                }
+
+
+
                 DialogResult = DialogResult.OK;
             }
         }
 
         private void FrmAddOrEditeCustomers_Load(object sender, EventArgs e)
         {
-            if (CustomerId!=0)
+            PicCustomer.Image = Image.FromFile(Application.StartupPath + "/Images/no-profile-image.png");
+            if (CustomerId != 0)
             {
                 this.Text = "ویرایش";
                 BtnSave.Text = "ویرایش";
-                using (UnitOfWork db=new UnitOfWork())
+                using (UnitOfWork db = new UnitOfWork())
                 {
                     var customer = db.CustomerRepositories.GetCustomerById(CustomerId);
                     TxtName.Text = customer.FullName;
@@ -88,6 +121,16 @@ namespace Accounting.App.Customer
             }
         }
 
+        private void TxtMobile_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((Convert.ToInt16(e.KeyChar) >= 48 && Convert.ToInt16(e.KeyChar) <= 57) || Convert.ToInt16(e.KeyChar) == 8)
+            {
 
+            }
+            else
+            {
+                e.KeyChar = Convert.ToChar(Keys.None);
+            }
+        }
     }
 }

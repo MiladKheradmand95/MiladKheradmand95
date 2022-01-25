@@ -39,7 +39,6 @@ namespace Accounting.App
             }
         }
 
-
         public static void DoWork()
         {
             using (UnitOfWork db = new UnitOfWork())

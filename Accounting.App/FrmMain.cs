@@ -13,7 +13,6 @@ using Accounting.App;
 using Accounting.Utility.Convertor;
 using Accounting.DataLayer.Contex;
 using Accounting.ViewModels.Account;
-using Accounting.Business;
 
 namespace Accounting.App
 {
@@ -40,39 +39,42 @@ namespace Accounting.App
         {
             frmReport frm = new frmReport();
             frm.TypeID = 2;
+            frm.dt = DateTime.Now;
             frm.ShowDialog();
+            
         }
 
         private void btnRecive_Click(object sender, EventArgs e)
         {
             frmReport frm = new frmReport();
             frm.TypeID = 1;
+            frm.dt = DateTime.Now;
             frm.ShowDialog();
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
+         
             this.Hide();
             frmLogin frmlogin = new frmLogin();
             if (frmlogin.ShowDialog()==DialogResult.OK)
             {
                 lblDate.Text = DateConverter.Toshamsi(DateTime.Now);
                 lblTime.Text = DateTime.Now.ToString("HH:mm:ss");
-                Report();
-            }
-            else
+                //Report();
+            }           else
             {
                 Application.Exit();
             }
         }
 
-        private void Report()
-        {
-            AccountViewModel report = Account.ReportFormMain();
-            lblPay.Text = report.Pay.ToString("#,0");
-            lblRecive.Text = report.Recive.ToString("#,0");
-            lblMandeh.Text = report.Mandeh.ToString("#,0");
-        }
+        //private void Report()
+        //{
+        //    AccountViewModel report = Account.ReportFormMain();
+        //    lblPay.Text = report.Pay.ToString("#,0");
+        //    lblRecive.Text = report.Recive.ToString("#,0");
+        //    lblMandeh.Text = report.Mandeh.ToString("#,0");
+        //}
 
         private void timer1_Tick(object sender, EventArgs e)
         {

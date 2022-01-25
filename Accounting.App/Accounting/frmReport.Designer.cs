@@ -36,7 +36,12 @@
             this.btnRefresh = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnPirint = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.RbSettlmentAccount = new System.Windows.Forms.RadioButton();
+            this.RbCurrentAccount = new System.Windows.Forms.RadioButton();
+            this.RbAllAccount = new System.Windows.Forms.RadioButton();
             this.btnOk = new System.Windows.Forms.Button();
             this.txtEDate = new System.Windows.Forms.MaskedTextBox();
             this.txtBDate = new System.Windows.Forms.MaskedTextBox();
@@ -50,10 +55,22 @@
             this.Amuont = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SetlmentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stiReport = new Stimulsoft.Report.StiReport();
+            this.lblSum = new DevComponents.DotNetBar.LabelX();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.BtnSettlment = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.chTodey = new System.Windows.Forms.CheckBox();
+            this.TarikhTasvih = new System.Windows.Forms.MaskedTextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgReport)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnEdite
@@ -95,7 +112,8 @@
             this.btnEdite,
             this.btnDelete,
             this.btnRefresh,
-            this.btnPirint});
+            this.btnPirint,
+            this.toolStripSeparator1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(575, 62);
@@ -113,8 +131,14 @@
             this.btnPirint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnPirint.Click += new System.EventHandler(this.btnPirint_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 62);
+            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.btnOk);
             this.groupBox1.Controls.Add(this.txtEDate);
             this.groupBox1.Controls.Add(this.txtBDate);
@@ -124,14 +148,58 @@
             this.groupBox1.Controls.Add(this.labelX1);
             this.groupBox1.Location = new System.Drawing.Point(12, 75);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(551, 62);
+            this.groupBox1.Size = new System.Drawing.Size(554, 122);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "جستجو";
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.RbSettlmentAccount);
+            this.groupBox4.Controls.Add(this.RbCurrentAccount);
+            this.groupBox4.Controls.Add(this.RbAllAccount);
+            this.groupBox4.Location = new System.Drawing.Point(160, 55);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(388, 55);
+            this.groupBox4.TabIndex = 5;
+            this.groupBox4.TabStop = false;
+            // 
+            // RbSettlmentAccount
+            // 
+            this.RbSettlmentAccount.AutoSize = true;
+            this.RbSettlmentAccount.Location = new System.Drawing.Point(110, 20);
+            this.RbSettlmentAccount.Name = "RbSettlmentAccount";
+            this.RbSettlmentAccount.Size = new System.Drawing.Size(126, 17);
+            this.RbSettlmentAccount.TabIndex = 0;
+            this.RbSettlmentAccount.TabStop = true;
+            this.RbSettlmentAccount.Text = "نمایش تسویه شده ها";
+            this.RbSettlmentAccount.UseVisualStyleBackColor = true;
+            // 
+            // RbCurrentAccount
+            // 
+            this.RbCurrentAccount.AutoSize = true;
+            this.RbCurrentAccount.Location = new System.Drawing.Point(242, 20);
+            this.RbCurrentAccount.Name = "RbCurrentAccount";
+            this.RbCurrentAccount.Size = new System.Drawing.Size(140, 17);
+            this.RbCurrentAccount.TabIndex = 0;
+            this.RbCurrentAccount.TabStop = true;
+            this.RbCurrentAccount.Text = "نمایش حساب های جاری";
+            this.RbCurrentAccount.UseVisualStyleBackColor = true;
+            // 
+            // RbAllAccount
+            // 
+            this.RbAllAccount.AutoSize = true;
+            this.RbAllAccount.Location = new System.Drawing.Point(6, 20);
+            this.RbAllAccount.Name = "RbAllAccount";
+            this.RbAllAccount.Size = new System.Drawing.Size(79, 17);
+            this.RbAllAccount.TabIndex = 0;
+            this.RbAllAccount.TabStop = true;
+            this.RbAllAccount.Text = "نمایش همه";
+            this.RbAllAccount.UseVisualStyleBackColor = true;
+            // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(6, 20);
+            this.btnOk.Location = new System.Drawing.Point(8, 20);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(57, 23);
             this.btnOk.TabIndex = 4;
@@ -141,7 +209,7 @@
             // 
             // txtEDate
             // 
-            this.txtEDate.Location = new System.Drawing.Point(69, 22);
+            this.txtEDate.Location = new System.Drawing.Point(71, 22);
             this.txtEDate.Mask = "0000/00/00";
             this.txtEDate.Name = "txtEDate";
             this.txtEDate.Size = new System.Drawing.Size(100, 21);
@@ -149,7 +217,7 @@
             // 
             // txtBDate
             // 
-            this.txtBDate.Location = new System.Drawing.Point(222, 22);
+            this.txtBDate.Location = new System.Drawing.Point(224, 22);
             this.txtBDate.Mask = "0000/00/00";
             this.txtBDate.Name = "txtBDate";
             this.txtBDate.Size = new System.Drawing.Size(100, 21);
@@ -159,7 +227,7 @@
             // 
             this.cbCustomer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCustomer.FormattingEnabled = true;
-            this.cbCustomer.Location = new System.Drawing.Point(371, 22);
+            this.cbCustomer.Location = new System.Drawing.Point(373, 22);
             this.cbCustomer.Name = "cbCustomer";
             this.cbCustomer.Size = new System.Drawing.Size(102, 21);
             this.cbCustomer.TabIndex = 2;
@@ -170,7 +238,7 @@
             // 
             // 
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Location = new System.Drawing.Point(175, 20);
+            this.labelX3.Location = new System.Drawing.Point(177, 20);
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(39, 23);
             this.labelX3.TabIndex = 0;
@@ -182,7 +250,7 @@
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(328, 20);
+            this.labelX2.Location = new System.Drawing.Point(330, 20);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(33, 23);
             this.labelX2.TabIndex = 0;
@@ -194,7 +262,7 @@
             // 
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(479, 20);
+            this.labelX1.Location = new System.Drawing.Point(481, 20);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(66, 23);
             this.labelX1.TabIndex = 0;
@@ -219,7 +287,9 @@
             this.CostumerID,
             this.Amuont,
             this.DateTime,
-            this.Description});
+            this.Description,
+            this.Status,
+            this.SetlmentDate});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -229,13 +299,13 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgReport.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgReport.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgReport.Location = new System.Drawing.Point(18, 162);
+            this.dgReport.Location = new System.Drawing.Point(12, 230);
             this.dgReport.Name = "dgReport";
             this.dgReport.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dgReport.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgReport.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgReport.Size = new System.Drawing.Size(545, 237);
+            this.dgReport.Size = new System.Drawing.Size(551, 220);
             this.dgReport.TabIndex = 2;
             // 
             // ID
@@ -274,6 +344,21 @@
             this.Description.Name = "Description";
             this.Description.ReadOnly = true;
             // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "Status";
+            this.Status.HeaderText = "وضعیت";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Visible = false;
+            // 
+            // SetlmentDate
+            // 
+            this.SetlmentDate.DataPropertyName = "SettlmentDate";
+            this.SetlmentDate.HeaderText = "تاریخ تسویه";
+            this.SetlmentDate.Name = "SetlmentDate";
+            this.SetlmentDate.ReadOnly = true;
+            // 
             // stiReport
             // 
             this.stiReport.CookieContainer = null;
@@ -295,11 +380,90 @@
             this.stiReport.ScriptLanguage = Stimulsoft.Report.StiReportLanguageType.CSharp;
             this.stiReport.UseProgressInThread = false;
             // 
+            // lblSum
+            // 
+            this.lblSum.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            // 
+            // 
+            // 
+            this.lblSum.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblSum.Location = new System.Drawing.Point(27, 29);
+            this.lblSum.Name = "lblSum";
+            this.lblSum.Size = new System.Drawing.Size(161, 23);
+            this.lblSum.TabIndex = 0;
+            this.lblSum.Tag = "0";
+            this.lblSum.Text = "0";
+            this.lblSum.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // labelX4
+            // 
+            // 
+            // 
+            // 
+            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX4.Location = new System.Drawing.Point(194, 29);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.Size = new System.Drawing.Size(56, 23);
+            this.labelX4.TabIndex = 0;
+            this.labelX4.Text = "مجموع =>";
+            // 
+            // BtnSettlment
+            // 
+            this.BtnSettlment.Location = new System.Drawing.Point(188, 24);
+            this.BtnSettlment.Name = "BtnSettlment";
+            this.BtnSettlment.Size = new System.Drawing.Size(75, 32);
+            this.BtnSettlment.TabIndex = 3;
+            this.BtnSettlment.Text = "تسویه حساب";
+            this.BtnSettlment.UseVisualStyleBackColor = true;
+            this.BtnSettlment.Click += new System.EventHandler(this.BtnSettlment_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.chTodey);
+            this.groupBox2.Controls.Add(this.BtnSettlment);
+            this.groupBox2.Controls.Add(this.TarikhTasvih);
+            this.groupBox2.Location = new System.Drawing.Point(12, 456);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(277, 68);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            // 
+            // chTodey
+            // 
+            this.chTodey.AutoSize = true;
+            this.chTodey.Location = new System.Drawing.Point(124, 33);
+            this.chTodey.Name = "chTodey";
+            this.chTodey.Size = new System.Drawing.Size(49, 17);
+            this.chTodey.TabIndex = 6;
+            this.chTodey.Text = "امروز";
+            this.chTodey.UseVisualStyleBackColor = true;
+            this.chTodey.CheckedChanged += new System.EventHandler(this.ChTodey_CheckedChanged);
+            // 
+            // TarikhTasvih
+            // 
+            this.TarikhTasvih.Location = new System.Drawing.Point(6, 31);
+            this.TarikhTasvih.Mask = "0000/00/00";
+            this.TarikhTasvih.Name = "TarikhTasvih";
+            this.TarikhTasvih.Size = new System.Drawing.Size(100, 21);
+            this.TarikhTasvih.TabIndex = 3;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.lblSum);
+            this.groupBox3.Controls.Add(this.labelX4);
+            this.groupBox3.Location = new System.Drawing.Point(295, 456);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(268, 68);
+            this.groupBox3.TabIndex = 5;
+            this.groupBox3.TabStop = false;
+            // 
             // frmReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 411);
+            this.ClientSize = new System.Drawing.Size(575, 536);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dgReport);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toolStrip1);
@@ -308,12 +472,18 @@
             this.Name = "frmReport";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = " ";
             this.Load += new System.EventHandler(this.frmReport_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgReport)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,11 +505,25 @@
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.Controls.DataGridViewX dgReport;
+        private Stimulsoft.Report.StiReport stiReport;
+        private DevComponents.DotNetBar.LabelX lblSum;
+        private DevComponents.DotNetBar.LabelX labelX4;
+        private System.Windows.Forms.Button BtnSettlment;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.MaskedTextBox TarikhTasvih;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CostumerID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amuont;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
-        private Stimulsoft.Report.StiReport stiReport;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SetlmentDate;
+        private System.Windows.Forms.CheckBox chTodey;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.RadioButton RbSettlmentAccount;
+        private System.Windows.Forms.RadioButton RbCurrentAccount;
+        private System.Windows.Forms.RadioButton RbAllAccount;
     }
 }

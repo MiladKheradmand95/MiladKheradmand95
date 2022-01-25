@@ -73,7 +73,7 @@
             this.BtnSave.Location = new System.Drawing.Point(32, 263);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(159, 29);
-            this.BtnSave.TabIndex = 0;
+            this.BtnSave.TabIndex = 4;
             this.BtnSave.Text = "ثبت";
             this.BtnSave.UseVisualStyleBackColor = true;
             this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
@@ -84,7 +84,7 @@
             this.TxtAddres.Multiline = true;
             this.TxtAddres.Name = "TxtAddres";
             this.TxtAddres.Size = new System.Drawing.Size(208, 63);
-            this.TxtAddres.TabIndex = 1;
+            this.TxtAddres.TabIndex = 3;
             // 
             // labelX4
             // 
@@ -103,7 +103,7 @@
             this.TxtEmail.Location = new System.Drawing.Point(6, 143);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(208, 21);
-            this.TxtEmail.TabIndex = 1;
+            this.TxtEmail.TabIndex = 2;
             // 
             // labelX3
             // 
@@ -123,6 +123,7 @@
             this.TxtMobile.Name = "TxtMobile";
             this.TxtMobile.Size = new System.Drawing.Size(208, 21);
             this.TxtMobile.TabIndex = 1;
+            this.TxtMobile.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtMobile_KeyPress);
             // 
             // labelX2
             // 
@@ -141,7 +142,7 @@
             this.TxtName.Location = new System.Drawing.Point(6, 38);
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(208, 21);
-            this.TxtName.TabIndex = 1;
+            this.TxtName.TabIndex = 0;
             // 
             // labelX1
             // 
@@ -178,7 +179,6 @@
             // 
             // PicCustomer
             // 
-            this.PicCustomer.Image = global::Accounting.App.Properties.Resources.no_profile_image;
             this.PicCustomer.Location = new System.Drawing.Point(6, 20);
             this.PicCustomer.Name = "PicCustomer";
             this.PicCustomer.Size = new System.Drawing.Size(159, 232);
@@ -227,7 +227,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.PictureBox PicCustomer;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button BtnBrows;
         private System.Windows.Forms.TextBox TxtAddres;
@@ -241,5 +240,6 @@
         private System.Windows.Forms.Button BtnSave;
         private ValidationComponents.RequiredFieldValidator requiredFieldValidator1;
         private ValidationComponents.RequiredFieldValidator requiredFieldValidator2;
+        private System.Windows.Forms.PictureBox PicCustomer;
     }
 }

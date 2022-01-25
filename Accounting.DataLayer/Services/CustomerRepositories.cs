@@ -31,10 +31,10 @@ namespace Accounting.DataLayer.Services
             return db.Customers.Where(c => c.FullName.Contains(parameter) || c.Mobile.Contains(parameter) || c.Email.Contains(parameter));
         }
 
-        public List<Customers> GetAllCustomers()
-        {
-            return db.Customers.ToList();
-        }
+        //public List<Customer> GetAllCustomer()
+        //{
+        //    return db.Customers.ToList();
+        //}
 
 
         public List<ListCustomerViewModels> GetNameCustomer(string filter = "")
@@ -117,5 +117,11 @@ namespace Accounting.DataLayer.Services
             }
         }
 
+        public List<Customers> GetAllCustomers()
+        {
+            return db.Customers.ToList();
+        }
+
+       
     }
 }

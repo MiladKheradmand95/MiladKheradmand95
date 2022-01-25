@@ -55,6 +55,11 @@ namespace Accounting.App
                     using (UnitOfWork u = new UnitOfWork())
                     {
                         int res = int.Parse(DgCustomer.CurrentRow.Cells["CustomreID"].Value.ToString());
+                        var customer= u.CustomerRepositories.GetCustomerById(res);
+                        if (customer.CustomerImage!= "no-profile-image.png")
+                        {
+                            System.IO.File.Delete(Application.StartupPath + "/Images/" + customer.CustomerImage);
+                        }
                         u.CustomerRepositories.DeleteCustomer(res);
                         u.Save();
                         BindGried();

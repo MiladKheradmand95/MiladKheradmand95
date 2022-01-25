@@ -85,26 +85,17 @@
     <Compile Include="Services\AccountingRepositries.cs" />
     <Compile Include="Services\CustomerRepositories.cs" />
     <Compile Include="Services\GenericRepositories.cs" />
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>AccountingModel.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="AccountingModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>AccountingModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="AccountingModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AccountingModel.edmx</DependentUpon>
-      <LastGenOutput>AccountingModel.Context.cs</LastGenOutput>
-    </None>
     <None Include="AccountingModel.edmx.diagram">
       <DependentUpon>AccountingModel.edmx</DependentUpon>
-    </None>
-    <None Include="AccountingModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AccountingModel.edmx</DependentUpon>
-      <LastGenOutput>AccountingModel.cs</LastGenOutput>
     </None>
     <None Include="App.Config">
       <SubType>Designer</SubType>
@@ -113,6 +104,24 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccountingModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AccountingModel.edmx</DependentUpon>
+      <LastGenOutput>AccountingModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="AccountingModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AccountingModel.edmx</DependentUpon>
+      <LastGenOutput>AccountingModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Accounting.Utility\Accounting.Utility.csproj">
+      <Project>{90d373b8-1fc4-4c21-aa2d-48516050acd2}</Project>
+      <Name>Accounting.Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

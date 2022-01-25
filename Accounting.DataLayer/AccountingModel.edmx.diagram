@@ -4,13 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="6b087f307d0942c1984d472bba42e672" Name="Diagram1">
-        <EntityTypeShape EntityType="Accounting_DBModel.Customers" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Accounting_DBModel.Accounting" Width="1.5" PointX="3" PointY="0.75" />
-        <EntityTypeShape EntityType="Accounting_DBModel.AccountingTypes" Width="1.5" PointX="0.75" PointY="4.25" />
-        <AssociationConnector Association="Accounting_DBModel.FK_Accounting_AccountingTypes" />
-        <AssociationConnector Association="Accounting_DBModel.FK_Accounting_Customers" />
-        <EntityTypeShape EntityType="Accounting_DBModel.Login" Width="1.5" PointX="5.25" PointY="0.875" />
+      <Diagram DiagramId="51c82d5a05b64353b0ca41661cf8b6a5" Name="Diagram1">
+        <EntityTypeShape EntityType="Accounting_DBModel.Accounting" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Accounting_DBModel.AccountingTypes" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Accounting_DBModel.Customers" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Accounting_DBModel.Login" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Accounting_DBModel.sysdiagrams" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="Accounting_DBModel.FK_Accounting_AccountingTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="Accounting_DBModel.FK_Accounting_Customers" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

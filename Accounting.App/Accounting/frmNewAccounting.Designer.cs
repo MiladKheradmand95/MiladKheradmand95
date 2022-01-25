@@ -43,7 +43,6 @@
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.rdRecive = new System.Windows.Forms.RadioButton();
             this.rdPay = new System.Windows.Forms.RadioButton();
-            this.txtAmount = new System.Windows.Forms.NumericUpDown();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.txtDescription = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -53,10 +52,9 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.requiredFieldValidator1 = new ValidationComponents.RequiredFieldValidator(this.components);
-            this.txttest = new System.Windows.Forms.TextBox();
+            this.txtAmount = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCustomer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAmount)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -187,19 +185,6 @@
             this.rdPay.Text = "پرداخت";
             this.rdPay.UseVisualStyleBackColor = true;
             // 
-            // txtAmount
-            // 
-            this.txtAmount.Location = new System.Drawing.Point(232, 80);
-            this.txtAmount.Maximum = new decimal(new int[] {
-            1215752191,
-            23,
-            0,
-            0});
-            this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(168, 21);
-            this.txtAmount.TabIndex = 4;
-            this.txtAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // labelX3
             // 
             // 
@@ -298,25 +283,24 @@
             this.requiredFieldValidator1.ErrorMessage = "نام طرف حساب را از لیست انتخاب کنید";
             this.requiredFieldValidator1.Icon = ((System.Drawing.Icon)(resources.GetObject("requiredFieldValidator1.Icon")));
             // 
-            // txttest
+            // txtAmount
             // 
-            this.txttest.Location = new System.Drawing.Point(267, 107);
-            this.txttest.Name = "txttest";
-            this.txttest.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txttest.Size = new System.Drawing.Size(100, 21);
-            this.txttest.TabIndex = 11;
-            this.txttest.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txttest_KeyPress);
+            this.txtAmount.Location = new System.Drawing.Point(232, 82);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(168, 21);
+            this.txtAmount.TabIndex = 11;
+            this.txtAmount.TextChanged += new System.EventHandler(this.TxtAmount_TextChanged);
+            this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txttest_KeyPress);
             // 
             // frmNewAccounting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 384);
-            this.Controls.Add(this.txttest);
+            this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtDescription);
-            this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.rdPay);
             this.Controls.Add(this.rdRecive);
             this.Controls.Add(this.txtName);
@@ -337,7 +321,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCustomer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAmount)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -355,19 +338,18 @@
         private DevComponents.DotNetBar.LabelX labelX2;
         private System.Windows.Forms.RadioButton rdRecive;
         private System.Windows.Forms.RadioButton rdPay;
-        private System.Windows.Forms.NumericUpDown txtAmount;
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.Controls.TextBoxX txtDescription;
         private System.Windows.Forms.Button btnSave;
         private ValidationComponents.RequiredFieldValidator requiredFieldValidator1;
-        private ValidationComponents.RangeValidator rangeValidator1;
+        //private ValidationComponents.RangeValidator rangeValidator1;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerID;
         private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
         private System.Windows.Forms.MaskedTextBox txtDate;
         private DevComponents.DotNetBar.LabelX labelX5;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txttest;
+        private System.Windows.Forms.TextBox txtAmount;
     }
 }

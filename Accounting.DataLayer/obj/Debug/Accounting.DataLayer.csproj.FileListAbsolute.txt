@@ -10,6 +10,7 @@ C:\Users\Milad\Desktop\Accounting\Accounting\Accounting.DataLayer\obj\Debug\Acco
 C:\Users\Milad\Desktop\Accounting\Accounting\Accounting.DataLayer\bin\Debug\Accounting.ViewModels.dll
 C:\Users\Milad\Desktop\Accounting\Accounting\Accounting.DataLayer\bin\Debug\Accounting.ViewModels.pdb
 C:\Users\Milad\Desktop\Accounting\Accounting\Accounting.DataLayer\obj\Debug\Accounting.DataLayer.csprojResolveAssemblyReference.cache
+D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.DataLayer\obj\Debug\Accounting.DataLayer.csproj.CoreCompileInputs.cache
 D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.DataLayer\bin\Debug\Accounting.DataLayer.dll.config
 D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.DataLayer\bin\Debug\Accounting.DataLayer.dll
 D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.DataLayer\bin\Debug\Accounting.DataLayer.pdb
@@ -19,8 +20,9 @@ D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Account
 D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.DataLayer\bin\Debug\Accounting.ViewModels.pdb
 D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.DataLayer\bin\Debug\EntityFramework.xml
 D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.DataLayer\bin\Debug\EntityFramework.SqlServer.xml
-D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.DataLayer\obj\Debug\Accounting.DataLayer.csprojAssemblyReference.cache
-D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.DataLayer\obj\Debug\Accounting.DataLayer.csproj.CoreCompileInputs.cache
 D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.DataLayer\obj\Debug\Accounting.DataLayer.csproj.CopyComplete
 D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.DataLayer\obj\Debug\Accounting.DataLayer.dll
 D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.DataLayer\obj\Debug\Accounting.DataLayer.pdb
+D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.DataLayer\obj\Debug\Accounting.DataLayer.csprojAssemblyReference.cache
+D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.DataLayer\bin\Debug\Accounting.Utility.dll
+D:\learningVideo\programerLanguig\C#\TopLearn_C#\TopLearn_CsharpAdvanced\Accounting\Accounting\Accounting.DataLayer\bin\Debug\Accounting.Utility.pdb

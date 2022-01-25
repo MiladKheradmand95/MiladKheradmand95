@@ -17,9 +17,11 @@ namespace Accounting.DataLayer
         public int ID { get; set; }
         public int CostumerID { get; set; }
         public int TypeID { get; set; }
-        public int Amuont { get; set; }
+        public decimal Amuont { get; set; }
         public string Description { get; set; }
         public Nullable<System.DateTime> Datetitle { get; set; }
+        public Nullable<bool> Status { get; set; }
+        public Nullable<System.DateTime> SettlmentDate { get; set; }
     
         public virtual AccountingTypes AccountingTypes { get; set; }
         public virtual Customers Customers { get; set; }
